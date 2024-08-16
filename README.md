@@ -20,7 +20,7 @@
 ## 创建NPC
 
 修改**命令存储**可以创建 NPC
-```
+```mcfunction
 data modify storage gufandf:open_npc/npc <NPC命名空间> set value <NPC数据>
 ```
 **NPC数据**是一个列表，储存了这个 NPC 的所有对话与选项内容。列表中的每一项为一个字典（称为一个**对话组件**），储存了本句对话或选项的内容。对话组件的所有数据值如下：
