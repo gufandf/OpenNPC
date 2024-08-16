@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "interact_deco": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"npc\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gufandf:open_npc/npc/inter"
+    }
+}

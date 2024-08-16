@@ -1,0 +1,6 @@
+{
+	"pack": {
+		"pack_format": 48,
+		"description": "数据包实现可以方便扩展的NPC对话功能"
+	}
+}

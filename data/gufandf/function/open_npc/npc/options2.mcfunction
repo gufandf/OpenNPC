@@ -1,0 +1,1 @@
+$give @a[tag=temp_target] $(item)[custom_name='$(option)',custom_model_data=$(custom_model_data),custom_data={option:$(optionNum)}]

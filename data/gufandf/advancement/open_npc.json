@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Open NPC",
+        "description": "开放式NPC",
+        "icon": {
+            "id": "minecraft:player_head"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "gufandf:root",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

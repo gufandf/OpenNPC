@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "gufandf:open_npc/_reset",
+        "gufandf:dfti/reset",
+        "gufandf:pid/reset"
+    ]
+}

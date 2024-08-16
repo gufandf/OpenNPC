@@ -1,0 +1,1 @@
+execute as @a unless score @s pid matches 1.. run function gufandf:pid/set_pid

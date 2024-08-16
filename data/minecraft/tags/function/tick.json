@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "gufandf:open_npc/_main",
+        "gufandf:dfti/main",
+        "gufandf:pid/main"
+    ]
+}

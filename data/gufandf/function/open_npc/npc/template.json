@@ -1,0 +1,33 @@
+[
+    {
+        "text": "请问需要什么帮助？",
+        "fx": "entity.villager.celebrate",
+        "functions": [
+            "say 123456"
+        ],
+        "options": [
+            {
+                "option": "我需要一把武器！",
+                "item": "minecraft:firework_star",
+                "custom_model_data": 1,
+                "text": "给你钻石剑",
+                "fx": "entity.villager.celebrate",
+                "jump_to": 4,
+                "functions": [
+                    "give @p diamond_sword"
+                ]
+            },
+            {
+                "option": "我需要一身盔甲！",
+                "text": "给你钻石胸甲",
+                "item": "minecraft:firework_star",
+                "custom_model_data": 1,
+                "fx": "entity.villager.celebrate",
+                "jump_to": 4,
+                "functions": [
+                    "give @p minecraft:diamond_chestplate"
+                ]
+            }
+        ]
+    }
+]

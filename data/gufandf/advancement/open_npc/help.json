@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "文档",
+        "description": "请看 README 文件",
+        "icon": {
+            "id": "minecraft:knowledge_book"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "gufandf:open_npc",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

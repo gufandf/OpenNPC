@@ -1,0 +1,17 @@
+{
+    "display": {
+        "title": "Pid",
+        "description": "前置",
+        "icon": {
+            "id": "minecraft:command_block"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "gufandf:open_npc",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

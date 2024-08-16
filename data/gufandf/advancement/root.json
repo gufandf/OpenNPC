@@ -1,0 +1,22 @@
+{
+    "display": {
+        "title": "Gufandf",
+        "description": "",
+        "icon": {
+            "id": "minecraft:player_head",
+            "components": {
+                "profile": {
+                    "name": "Gufandf"
+                }
+            }
+        },
+        "background": "minecraft:textures/block/gray_concrete.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

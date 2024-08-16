@@ -1,0 +1,1 @@
+execute as @e[type=item] run function gufandf:dfti/dfti

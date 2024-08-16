@@ -1,0 +1,1 @@
+$playsound $(fx) master @a ~ ~ ~ 1 1 0
