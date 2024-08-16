@@ -106,7 +106,7 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 
 以下为内置示例，位于 `gufandf:open_npc/npc/set_npc_content`，可以使用 `function gufandf:open_npc/npc/create {npc_name:"铁匠"}` 生成：
 
-```mcfunction
+```
 data modify storage gufandf:open_npc/npc 铁匠 set value [\
     {\
         "text": '[{"text":"你好，冒险家！"}]',\
