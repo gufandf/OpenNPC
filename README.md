@@ -176,5 +176,5 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 |------|:----- |
 | 命名空间 |gufandf|
 | 记分板 |open_npc_chat、pid|
-| 命令存储 |gufandf:open_npc/npc|
+| 命令存储 |gufandf:open_npc|
 | 实体tag |open_npc_target、open_npc_npc、temp_open_npc_end、open_npc_itme1、open_npc_itme2、temp_item_load_player、temp_item_save_player、npc、dont_throw_item、<NPC命名空间>|
