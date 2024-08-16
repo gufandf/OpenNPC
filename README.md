@@ -42,7 +42,7 @@ data modify storage gufandf:open_npc/npc <NPC命名空间> set value <NPC数据>
             "option": <本选项的文本组件>,
             "item": <选项使用的物品>,
             "custom_model_data": <物品的custom_model_data>,
-            "text": <选择本选项后的文本组件>,
+            "text": <选择本选项后NPC的对话的文本组件>,
             "fx": <音效>,
             "functions": [
                 <选择后运行的一条指令>,
@@ -54,7 +54,7 @@ data modify storage gufandf:open_npc/npc <NPC命名空间> set value <NPC数据>
     ]
 }
 ```
-`text` 的值为字符串格式的文本组件，需要使用(')括起，如`'[{"text":"test text"}]'`
+`text` 与 `option` 的值为字符串格式的文本组件，需要使用(')括起，如`'[{"text":"test text"}]'`
 
 `functions` 中的指令（不加/）会按照顺序依次运行，但强烈建议将多行指令放入函数文件后用 `function` 运行。
 
