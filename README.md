@@ -80,6 +80,12 @@ function gufandf:open_npc/npc/create {npc_name:<NPC命名空间:str>}
 NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为第 1 句，修改记分板分数可以直接设置对话进度。实际上这就是 jump_to 方法的原理。
 
 ## 目标选择器
+|选择器|目标|
+|---|---|
+|@e[tag=npc]|所有 NPC|
+|@e[tag=<NPC命名空间>]|指定 NPC|
+|@e[nbt={Tags:[<NPC命名空间>]}]|指定 NPC（中文）|
+
 以下选择器仅可在 functions 中的命令中生效：
 |选择器|目标|
 |---|---|
@@ -174,5 +180,4 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 | 记分板 |open_npc_chat、pid|
 | 命令存储 |gufandf:open_npc/npc|
 | 实体tag |temp_target、temp_npc、temp_end、open_npc_itme1、open_npc_itme2、|
-||temp_item_load_player、temp_item_save_player、npc|
-
+||temp_item_load_player、temp_item_save_player、npc、<NPC命名空间>|
