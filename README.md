@@ -29,26 +29,26 @@ data modify storage gufandf:open_npc/npc <NPC命名空间> set value <NPC数据>
 
 ```
 {
-    "text": <本对话的文本组件:str>,
-    "fx": <音效:str>,
+    "text": <本对话的文本组件>,
+    "fx": <音效>,
     "functions": [
-        <交互后运行的一条指令:str>,
+        <交互后运行的一条指令>,
         ...
     ],
-    "jump_to": <跳转到位置:int>，
+    "jump_to": <跳转到位置>，
     "options": [
         {
             <一个选项>
-            "option": <本选项的文本组件:str>,
-            "item": <选项使用的物品:str>,
-            "custom_model_data": <物品的custom_model_data:int>,
-            "text": <选择本选项后的文本组件:str>,
-            "fx": <音效:str>,
+            "option": <本选项的文本组件>,
+            "item": <选项使用的物品>,
+            "custom_model_data": <物品的custom_model_data>,
+            "text": <选择本选项后的文本组件>,
+            "fx": <音效>,
             "functions": [
-                <选择后运行的一条指令:str>,
+                <选择后运行的一条指令>,
                 ...
             ],
-            "jump_to": <跳转到位置:int>，
+            "jump_to": <跳转到位置>，
         },
         ...
     ]
@@ -74,7 +74,7 @@ data modify storage gufandf:open_npc/npc <NPC命名空间> set value <NPC数据>
 使用以下命令在当前位置生成 NPC。
 
 ```mcfunction
-function gufandf:open_npc/npc/create {npc_name:<NPC命名空间:str>}
+function gufandf:open_npc/npc/create {npc_name:<NPC命名空间>}
 ```
 
 NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为第 1 句，修改记分板分数可以直接设置对话进度。实际上这就是 jump_to 方法的原理。
