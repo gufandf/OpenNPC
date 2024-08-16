@@ -15,6 +15,8 @@
 
 开放式 NPC （OpenNPC）是一个我的世界数据包。可以生成带有对话、选项、可高度自定义的**交互实体**。
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112970860398533&bvid=BV1RhegewELn&cid=500001651471732&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 # 接口
 
 ## 创建NPC
