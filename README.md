@@ -5,7 +5,7 @@
     * [创建NPC](#创建npc)
     * [生成NPC](#生成npc)
     * [目标选择器](#目标选择器)
-    * [数据值优先级](#数据值优先级)
+    * [数据值应用顺序](#数据值应用顺序)
 * [示例](#示例)
 * [多人游戏兼容性](#多人游戏兼容性)
 * [占用的数据值](#占用的数据值)
@@ -92,75 +92,74 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 |@a[tag=open_npc_target]|对话的玩家|
 |@e[tag=open_npc_npc] 或 @s|当前NPC|
 
-## 数据值优先级
+## 数据值应用顺序
 
-优先级：
-- functions
-- text
-- fx
-- jump_to
-- options
+1. functions
+2. text
+3. fx
+4. jump_to
+5. options
 
 这意味着，在 functions 中可以进行更加复杂的判断并修改其他数值。如需要根据游戏耗时的不同让 NPC 进行不同的对话，则可以在 functions 中使用 `/execute` 语句判断条件并修改 `gufandf:open_npc/chat temp.content.text` 的值。
 
 # 示例
 
-以下为内置示例，可以使用 `function gufandf:open_npc/npc/create {npc_name:"铁匠"}` 生成：
+以下为内置示例，位于 `gufandf:open_npc/npc/set_npc_content`，可以使用 `function gufandf:open_npc/npc/create {npc_name:"铁匠"}` 生成：
 
-```
-[
-    {
-        "text": '[{"text":"你好，冒险家！"}]',
-        "fx": "minecraft:entity.villager.celebrate"
-    },
-    {
-        "text": '[{"text":"你需要什么帮助吗？"}]',
-        "fx": "minecraft:entity.villager.celebrate",
-        "options": [
-            {
-                "option": '[{"text":"需要！"}]'
-            },
-            {
-                "option": '[{"text":"不需要"}]',
-                "jump_to": 4
-            }
-        ]
-    },
-    {
-        "text": '[{"text":"请问需要什么帮助？"}]',
-        "fx": "minecraft:entity.villager.celebrate",
-        "options": [
-            {
-                "option": '[{"text":"我需要一把武器！"}]',
-                "text": '[{"text":"给你钻石剑"}]',
-                "fx": "minecraft:entity.villager.celebrate",
-                "item":"minecraft:diamond_sword",
-                "jump_to": 4,
-                "functions": [
-                    "give @a[tag=open_npc_target] diamond_sword"
-                ]
-            },
-            {
-                "option": '[{"text":"我需要一身盔甲！"}]',
-                "text": '[{"text":"给你钻石胸甲"}]',
-                "fx": "minecraft:entity.villager.celebrate",
-                "item":"minecraft:diamond_chestplate",
-                "jump_to": 4,
-                "functions": [
-                    "give @a[tag=open_npc_target] minecraft:diamond_chestplate"
-                ]
-            }
-        ]
-    },
-    {
-        "text": '[{"text":"我已经没有什么能帮到你的了"}]',
-        "fx": "minecraft:entity.villager.celebrate"
-    },
-    {
-        "text": '[{"text":"去闯荡吧，冒险家！"}]',
-        "fx": "minecraft:entity.villager.celebrate",
-        "jump_to": 3
-    }
+```mcfunction
+data modify storage gufandf:open_npc/npc 铁匠 set value [\
+    {\
+        "text": '[{"text":"你好，冒险家！"}]',\
+        "fx": "minecraft:entity.villager.celebrate"\
+    },\
+    {\
+        "text": '[{"text":"你需要什么帮助吗？"}]',\
+        "fx": "minecraft:entity.villager.celebrate",\
+        "options": [\
+            {\
+                "option": '[{"text":"需要！"}]'\
+            },\
+            {\
+                "option": '[{"text":"不需要"}]',\
+                "jump_to": 4\
+            }\
+        ]\
+    },\
+    {\
+        "text": '[{"text":"请问需要什么帮助？"}]',\
+        "fx": "minecraft:entity.villager.celebrate",\
+        "options": [\
+            {\
+                "option": '[{"text":"我需要一把武器！"}]',\
+                "text": '[{"text":"给你钻石剑"}]',\
+                "fx": "minecraft:entity.villager.celebrate",\
+                "item":"minecraft:diamond_sword",\
+                "jump_to": 4,\
+                "functions": [\
+                    "give @a[tag=open_npc_target] diamond_sword"\
+                ]\
+            },\
+            {\
+                "option": '[{"text":"我需要一身盔甲！"}]',\
+                "text": '[{"text":"给你钻石胸甲"}]',\
+                "fx": "minecraft:entity.villager.celebrate",\
+                "item":"minecraft:diamond_chestplate",\
+                "jump_to": 4,\
+                "functions": [\
+                    "give @a[tag=open_npc_target] minecraft:diamond_chestplate"\
+                ]\
+            }\
+        ]\
+    },\
+    {\
+        "text": '[{"text":"我已经没有什么能帮到你的了"}]',\
+        "fx": "minecraft:entity.villager.celebrate"\
+    },\
+    {\
+        "text": '[{"text":"去闯荡吧，冒险家！"}]',\
+        "fx": "minecraft:entity.villager.celebrate",\
+        "jump_to": 3\
+    }\
 ]
 
 ```
