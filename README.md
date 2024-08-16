@@ -89,8 +89,8 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 以下选择器仅可在 functions 中的命令中生效：
 |选择器|目标|
 |---|---|
-|@a[tag=temp_target]|对话的玩家|
-|@e[tag=temp_npc] 或 @s|当前NPC|
+|@a[tag=open_npc_target]|对话的玩家|
+|@e[tag=open_npc_npc] 或 @s|当前NPC|
 
 ## 数据值优先级
 
@@ -140,7 +140,7 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
                 "fx": "minecraft:entity.villager.celebrate",
                 "jump_to": 4,
                 "functions": [
-                    "give @a[tag=temp_target] diamond_sword"
+                    "give @a[tag=open_npc_target] diamond_sword"
                 ]
             },
             {
@@ -149,7 +149,7 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
                 "fx": "minecraft:entity.villager.celebrate",
                 "jump_to": 4,
                 "functions": [
-                    "give @a[tag=temp_target] minecraft:diamond_chestplate"
+                    "give @a[tag=open_npc_target] minecraft:diamond_chestplate"
                 ]
             }
         ]
@@ -175,9 +175,8 @@ NPC 在记分板 open_npc_chat 上的分数为当前对话的进度，0 分为�
 > 请不要随意占用任何数据值
 
 |类型|值|
-| ------ | ----- |
+|------|:----- |
 | 命名空间 |gufandf|
 | 记分板 |open_npc_chat、pid|
 | 命令存储 |gufandf:open_npc/npc|
-| 实体tag |temp_target、temp_npc、temp_end、open_npc_itme1、open_npc_itme2、|
-||temp_item_load_player、temp_item_save_player、npc、<NPC命名空间>|
+| 实体tag |open_npc_target、open_npc_npc、temp_open_npc_end、open_npc_itme1、open_npc_itme2、temp_item_load_player、temp_item_save_player、npc、dont_throw_item、<NPC命名空间>|

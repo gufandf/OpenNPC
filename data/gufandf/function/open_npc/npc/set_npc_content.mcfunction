@@ -30,7 +30,7 @@ data modify storage gufandf:open_npc/npc 铁匠 set value [\
                 "fx": "minecraft:entity.villager.celebrate",\
                 "jump_to": 4,\
                 "functions": [\
-                    "give @a[tag=temp_target] diamond_sword"\
+                    "give @a[tag=open_npc_target] diamond_sword"\
                 ]\
             },\
             {\
@@ -39,7 +39,7 @@ data modify storage gufandf:open_npc/npc 铁匠 set value [\
                 "fx": "minecraft:entity.villager.celebrate",\
                 "jump_to": 4,\
                 "functions": [\
-                    "give @a[tag=temp_target] minecraft:diamond_chestplate"\
+                    "give @a[tag=open_npc_target] minecraft:diamond_chestplate"\
                 ]\
             }\
         ]\

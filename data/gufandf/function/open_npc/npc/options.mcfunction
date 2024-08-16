@@ -1,9 +1,9 @@
-scoreboard players operation @s pid = @a[tag=temp_target,limit=1] pid
-tag @a[tag=temp_target,limit=1] add chooseing
-tag @a[tag=temp_target,limit=1] add dont_throw_item
+scoreboard players operation @s pid = @a[tag=open_npc_target,limit=1] pid
+tag @a[tag=open_npc_target,limit=1] add chooseing
+tag @a[tag=open_npc_target,limit=1] add dont_throw_item
 # 保存并清空物品栏
-execute as @a[tag=temp_target,limit=1] run function gufandf:open_npc/player/inventory/save
-clear @a[tag=temp_target,limit=1]
+execute as @a[tag=open_npc_target,limit=1] run function gufandf:open_npc/player/inventory/save
+clear @a[tag=open_npc_target,limit=1]
 # 设置选项
 $data modify storage gufandf:open_npc/chat temp.contents set value $(options)
 execute unless data storage gufandf:open_npc/chat temp.contents[0] run say 未设置选项
