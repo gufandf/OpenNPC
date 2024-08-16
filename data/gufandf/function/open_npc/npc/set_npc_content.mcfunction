@@ -8,14 +8,10 @@ data modify storage gufandf:open_npc/npc 铁匠 set value [\
         "fx": "minecraft:entity.villager.celebrate",\
         "options": [\
             {\
-                "option": '[{"text":"需要！"}]',\
-                "item": "minecraft:firework_star",\
-                "custom_model_data": 1\
+                "option": '[{"text":"需要！"}]'\
             },\
             {\
                 "option": '[{"text":"不需要"}]',\
-                "item": "minecraft:firework_star",\
-                "custom_model_data": 1,\
                 "jump_to": 4\
             }\
         ]\
@@ -28,6 +24,7 @@ data modify storage gufandf:open_npc/npc 铁匠 set value [\
                 "option": '[{"text":"我需要一把武器！"}]',\
                 "text": '[{"text":"给你钻石剑"}]',\
                 "fx": "minecraft:entity.villager.celebrate",\
+                "item":"minecraft:diamond_sword",\
                 "jump_to": 4,\
                 "functions": [\
                     "give @a[tag=open_npc_target] diamond_sword"\
@@ -37,6 +34,7 @@ data modify storage gufandf:open_npc/npc 铁匠 set value [\
                 "option": '[{"text":"我需要一身盔甲！"}]',\
                 "text": '[{"text":"给你钻石胸甲"}]',\
                 "fx": "minecraft:entity.villager.celebrate",\
+                "item":"minecraft:diamond_chestplate",\
                 "jump_to": 4,\
                 "functions": [\
                     "give @a[tag=open_npc_target] minecraft:diamond_chestplate"\
